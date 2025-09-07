@@ -5,6 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
 }
 
 .popup-overlay {
@@ -29,4 +31,84 @@ body {
     width: 400px;
     text-align: center;
     border: 1px solid #e5e7eb;
+}
+
+.card-title {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 600;
+    color: #1f2937; /* gray-800 */
+    margin-bottom: 1.5rem; /* 24px */
+}
+
+.timer-display {
+    font-size: 3.75rem; /* 60px */
+    font-weight: 700;
+    color: #111827; /* gray-900 */
+    margin-bottom: 2rem; /* 32px */
+    letter-spacing: 0.1em;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* 16px */
+    margin-bottom: 2rem; /* 32px */
+}
+
+.time-btn {
+    background-color: #4f46e5; /* indigo-600 */
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem; /* 12px 24px */
+    border-radius: 0.75rem; /* 12px */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.time-btn:hover {
+    background-color: #4338ca; /* indigo-700 */
+    transform: translateY(-2px) scale(1.05);
+}
+
+.btn {
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem; /* 20px */
+  padding: 1rem; /* 16px */
+  border-radius: 0.75rem; /* 12px */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.start-btn {
+  background-color: #10b981; /* emerald-500 */  
+}
+
+.start-btn:hover {
+    background-color: #059669; /* emerald-600 */
+    transform: scale(1.05);
+}
+
+.pause-btn {
+    background-color: #f59e0b; /* amber-500 */
+}
+
+.pause-btn:hover {
+    background-color: #d97706; /* amber-600 */
+    transform: scale(1.05);
+}
+
+.reset-btn {
+    background-color: #ef4444; /* red-500 */
+}
+
+.reset-btn:hover {
+    background-color: #dc2626; /* red-600 */
+    transform: scale(1.05);
 }
