@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador Pomodoro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <div class="popup-overlay" id="timer-popup">
+        <div class="popup-card">
+            <h1 class="text-3xl font-semibold text-gray-800 mb-6">Temporizador</h1>
+            <!-- Display do temporizador -->
+            <div class="text-6xl font-bold text-gray-900 mb-8 tracking-wider">
+                <span id="display-min">00</span>:<span id="display-sec">00</span>
+            </div>
+            <!-- Botões de configuração do temporizador -->
+            <div class="flex justify-center flex-wrap gap-4 mb-8">
+                <button class="time-btn bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-md">15 min</button>
+                <button class="time-btn bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-md">30 min</button>
+                <button class="time-btn bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-md">45 min</button>
+                <button class="time-btn bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-6 rounded-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-md">1 hr</button>
+            </div>
+            <!-- Começar -->
+            <button class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xl py-4 rounded-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Iniciar
+            </button>
+        </div>
+    </div>
+</body>
+</html>
