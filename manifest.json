@@ -19,5 +19,6 @@
   "permissions": [
     "alarms",
     "notifications"
-  ]
+  ],
+  "host_permissions": ["https://*/*", "http://*/*"]
 }
