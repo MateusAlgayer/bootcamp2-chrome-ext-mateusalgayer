@@ -14,7 +14,7 @@ function startTimer(minutes) {
       if (alarm.name === 'pomodoro') {
         chrome.notifications.create(Date.now().toString(), {
           type: "basic",
-          iconUrl: "../../icons/icon32.png",
+          iconUrl: "../assets/logo.png",
           title: "Atenção!",
           message: "O tempo do Pomodoro acabou!",
           priority: 2
