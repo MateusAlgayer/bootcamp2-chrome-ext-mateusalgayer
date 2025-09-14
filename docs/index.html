@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Pomodoro Timer</title>
+</head>
+
+<body>
+  <h1>⏱️ Pomodoro Timer</h1>
+  <p>Um simples temporizador Pomodoro para ajudar você a se concentrar.</p>
+
+  <iframe src="../src/popup/popup.html" frameborder="0" width="100%" height="600px"></iframe>
+
+  <h2>Descrição</h2>
+  <p>Um aplicativo simples e eficaz baseado na técnica Pomodoro para aumentar sua produtividade. Trabalhe em blocos de
+    tempo com pausas programadas e mantenha o foco nas suas tarefas!</p>
+
+  <p>Desenvolvido para a disciplina de Bootcamp II.</p>
+
+  <h2>🔒Permissões necessárias</h2>
+  <ul>
+    <li>alarms</li>
+    <li>notifications</li>
+  </ul>
+
+  <h2>📦 Instalação</h2>
+
+  <p>Siga os passos abaixo para instalar e executar o projeto localmente:</p>
+
+  <p>1 - Baixe o zip do projeto nas releases</p>
+    <pre><code>
+https://github.com/MateusAlgayer/bootcamp2-chrome-ext-mateusalgayer/releases
+    </code></pre>
+  <p>2 - Vá até as extensões do chrome</p>
+  <pre><code>chrome://extensions/</code></pre>
+
+  <p>Ative o modo de desenvolvedor, e carregue a extensão.</p>
+
+  <h2>🚀 Uso</h2>
+
+  <p>Após iniciar o app, você verá a interface principal com as seguintes funcionalidades:</p>
+
+  <ul>
+    <li>⏳ Temporizador Pomodoro (15 minutos por padrão)</li>
+    <li>☕ Botões de 15, 30, 45 e 60 minutos</li>
+  </ul>
+  <ul>
+    <li>🔔 Notificações sonoras e visuais</li>
+  </ul>
+
+  <p>Você pode iniciar ou zerar o ciclo a qualquer momento.</p>
+
+  <h2>🧱 Estrutura do Projeto</h2>
+
+  <p>Abaixo está uma visão geral da estrutura de diretórios:</p>
+  <pre><code>
+    bootcamp2-chrome-ext-mateusalgayer/
+    ├── icons/                       # Ícones da aplicação
+    │   ├── icon16.png               # Ícone 16x16
+    │   ├── icon32.png               # Ícone 32x32
+    │   ├── icon48.png               # Ícone 48x48
+    │   └── icon128.png              # Ícone 128x128
+    ├── src/                         # Código-fonte principal
+    │   ├── assets/                  # Assets da aplicação
+    |   |   └── logo.png             # Logo da aplicação para uso de notificação
+    │   ├── background/              # Serviços 
+    |   |   └── service-worker.js    # Service worker para gerenciar as APIs do chrome
+    │   ├── popup/                   # Funções auxiliares
+    |   |   ├── popup.html           # HTML estático do popup
+    |   |   └── popup.js             # Controller da tela de popup
+    │   └── styles/                  # Estilos
+    |       └── styles.css           # .css com os estilos do popup
+    ├── docs/                        # Pasta com o conteúdo publicado no github pages
+    |   ├── index.html               # Página inicial do github pages
+    |   └── styles/                  # Estilos do github pages
+    |       └── styles.css           # .css com os estilos do github pages
+    ├── manifest.json                # Manifesto com as permissões e configurações da extensão.
+    └── README.md                    # Documentação
+  </code></pre>
+
+  <h2>📄 Licença</h2>
+  <p>
+    Este projeto está licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
+
+    Você é livre para usar, modificar e distribuir este software com atribuição adequada.
+  </p>
+</body>
+
+</html>

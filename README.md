@@ -58,6 +58,10 @@ bootcamp2-chrome-ext-mateusalgayer/
 |   |   └── popup.js             # Controller da tela de popup
 │   └── styles/                  # Estilos
 |       └── styles.css           # .css com os estilos do popup
+├── docs/                        # Pasta com o conteúdo publicado no github pages
+|   ├── index.html               # Página inicial do github pages
+|   └── styles/                  # Estilos do github pages
+|       └── styles.css           # .css com os estilos do github pages
 ├── manifest.json                # Manifesto com as permissões e configurações da extensão.
 └── README.md                    # Documentação
 ```
