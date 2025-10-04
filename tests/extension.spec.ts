@@ -11,7 +11,7 @@ const dist = path.resolve(__dirname, '..', 'dist');
 async function setupPersistentContext(func: (popup: any) => Promise<void>) {
   // Wrapper para criar um contexto persistente com a extensão carregada.
   const context = await chromium.launchPersistentContext('', {
-    headless: false,
+    channel: 'chromium',
     args: [
       `--disable-extensions-except=${dist}`,
       `--load-extension=${dist}`
@@ -24,8 +24,10 @@ async function setupPersistentContext(func: (popup: any) => Promise<void>) {
   const extensionId = serviceWorker.url().split('/')[2];
 
   try {
-    const [popup] = context.pages();
+    const popup = await context.newPage();
     await popup.goto(`chrome-extension://${extensionId}/src/popup/popup.html`);
+    await popup.waitForLoadState('domcontentloaded');
+
     await func(popup);
   } finally {
     await context.close();
