@@ -18,12 +18,14 @@ async function setupPersistentContext(func: (popup: any) => Promise<void>) {
     ]
   });
   
+  // Busca o service worker da extensão para obter o ID da extensão
   let [serviceWorker] = context.serviceWorkers();
   if (!serviceWorker)
     serviceWorker = await context.waitForEvent('serviceworker');
   const extensionId = serviceWorker.url().split('/')[2];
 
   try {
+    // Abre a popup da extensão e passa o popup para o teste
     const popup = await context.newPage();
     await popup.goto(`chrome-extension://${extensionId}/src/popup/popup.html`);
     await popup.waitForLoadState('domcontentloaded');
