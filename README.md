@@ -41,15 +41,15 @@ Você pode iniciar ou zerar o ciclo a qualquer momento.
 
 Para rodar os testes localmente utilizar os comandos:
 
+1 - Para construir a imagem:
 ```
 sudo docker compose build
 ```
-Para construir a imagem
 
+2 - Para rodar os testes E2E locais
 ```
 sudo docker compose run --rm e2e
 ```
-Para rodar os testes E2E locais
 
 Os testes são realizados utilizando Playwright.
 
