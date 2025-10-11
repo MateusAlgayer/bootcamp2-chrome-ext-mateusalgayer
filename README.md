@@ -37,6 +37,24 @@ Após iniciar o app, você verá a interface principal com as seguintes funciona
 
 Você pode iniciar ou zerar o ciclo a qualquer momento.
 
+# 🛠️ Testes
+
+Para rodar os testes localmente utilizar os comandos:
+
+```
+sudo docker compose build
+```
+Para construir a imagem
+
+```
+sudo docker compose run --rm e2e
+```
+Para rodar os testes E2E locais
+
+Os testes são realizados utilizando Playwright.
+
+Também são realizados testes de CI ao dar commit das alterações para o git via Github Actions.
+
 # 🧱 Estrutura do Projeto
 
 Abaixo está uma visão geral da estrutura de diretórios:
@@ -62,6 +80,11 @@ bootcamp2-chrome-ext-mateusalgayer/
 |   ├── index.html               # Página inicial do github pages
 |   └── styles/                  # Estilos do github pages
 |       └── styles.css           # .css com os estilos do github pages
+├── tests/                       # Testes do sistema
+|   ├── extension.spec.ts        # Testes unitários da extensão
+|   └── playwright.config.ts     # Configurações Playwright
+├── scripts/                     # scripts da aplicação
+|   └── build-extension.mjs      # script para build da aplicação
 ├── manifest.json                # Manifesto com as permissões e configurações da extensão.
 └── README.md                    # Documentação
 ```
